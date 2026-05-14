@@ -1,0 +1,72 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Nunito', sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-brand-red: var(--brand-red);
+  --color-brand-green: var(--brand-green);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-purple: var(--brand-purple);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.2 0.03 265);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.03 265);
+  --primary: oklch(0.25 0.05 265);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.97 0.005 247);
+  --secondary-foreground: oklch(0.25 0.05 265);
+  --muted: oklch(0.97 0.005 247);
+  --muted-foreground: oklch(0.55 0.03 257);
+  --accent: oklch(0.97 0.005 247);
+  --accent-foreground: oklch(0.25 0.05 265);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.93 0.01 255);
+  --input: oklch(0.93 0.01 255);
+  --ring: oklch(0.7 0.04 256);
+
+  --sidebar-bg: #1a1f36;
+  --brand-red: #e63946;
+  --brand-green: #2dc653;
+  --brand-yellow: #f4a261;
+  --brand-blue: #4cc9f0;
+  --brand-purple: #9b5de5;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html, body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f5f7fb;
+    color: var(--color-foreground);
+  }
+}
